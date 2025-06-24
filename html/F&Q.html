@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毛上好犬貓專科</title>
+
+    <!-- 相對路徑 絕對路徑 -->
+    <link rel="stylesheet" href="../css/F&Q.css">
+
+    <!-- 引入  Fonts awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Knewave&display=swap"
+        rel="stylesheet">
+    <!-- 引入 徽標 -->
+    <link rel="shortcut icon" href="../links/img/index/徽標.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="../html/index.html"><img src="../links/img/index/moogood-logo.png" alt="Logo"
+                                class="logo" /></a></li>
+                    <li><a href="../html/news.html"><span>NEWS</span> 最新消息</a></li>
+                    <li><a href="../html/clinic.html"><span>INFO</span> 診所資訊</a></li>
+                    <li><a href="../html/serve.html"><span>SERVE</span> 服務項目</a></li>
+                    <li><a href="../html/F&Q.html"><span>FAQ</span> 常見問題</a></li>
+                    <li><a href="../html/context.html"><span>CONNECT</span> 聯繫我們</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="Clinic-top">
+            <button class="emergency-btn">24小時急診專線&nbsp;<i class="fa-solid fa-phone-flip"></i></button>
+        </div>
+
+    </div>
+
+    <section class="faq-section">
+        <h1><span class="brand">first</span> 常見問題</h1>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="q-icon">Q</div>
+                <p>診所的看診時間是什麼？</p>
+                <div class="toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                營業時間為週一至週六 09:00–18:00，週日及國定假日休診。如有特殊假期將公告於官網與粉絲專頁。
+            </div>
+        </div>
+
+        <!-- 可再複製更多 faq-item 結構 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="q-icon">Q</div>
+                <p>是否有提供寵物疫苗施打服務？</p>
+                <div class="toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                有的，我們提供犬貓常規疫苗與狂犬病疫苗接種服務，請攜帶健康手冊前來，醫師會確認接種紀錄。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="q-icon">Q</div>
+                <p>常寵物結紮手術後需要住院嗎？</p>
+                <div class="toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                結紮手術為當日來回型態，術後觀察無異常可返家休息，若需留院觀察，醫師會依實際情況建議。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="q-icon">Q</div>
+                <p>常是否提供洗牙服務？</p>
+                <div class="toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                要服務犬貓。如需帶兔子、倉鼠、鳥類等特殊寵物就診，建議先電洽確認是否有相關醫師時段。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="q-icon">Q</div>
+                <p>有配合寵物保險嗎？</p>
+                <div class="toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                我們診所可協助辦理多數寵物保險的理賠流程，就診時請提供保單資訊，櫃檯將協助您申請。
+            </div>
+        </div>
+    </section>
+
+    <!---- footer ---->
+    <footer class="footer">
+        <div class="footer-frist">
+            <div class="footer-logo">
+                <img src="../links/img/index/moogood-logo-s.png" alt="">
+            </div>
+
+
+            <div class="footer-text">
+                <h5>(02) 2358-1199</br>台北市新生南路一段162號1樓</h5>
+            </div>
+
+
+            <div class="footer-social">
+                <img src="../links/img/index/social-midia.png" alt="">
+            </div>
+
+
+            <div class="button">
+                <img src="../links/img/index/24hrbt.png" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+<!---- FAQ js ---->
+<script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            item.classList.toggle('open');
+        });
+    });
+</script>
+<!---- go to top js ---->
+<button id="goTopBtn" title="回到頂部"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+    const goTopBtn = document.getElementById("goTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (document.documentElement.scrollTop > 300) {
+            goTopBtn.style.display = "block";
+        } else {
+            goTopBtn.style.display = "none";
+        }
+    });
+
+    goTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+</html>

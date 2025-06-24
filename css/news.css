@@ -1,0 +1,324 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: 'GenSenRounded2TW-B';
+    src: url(../links/fonts/GenSenRounded2TW-B.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'GenSenRounded2TW-M';
+    src: url(../links/fonts/GenSenRounded2TW-M.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'GenSenRounded2TW-R';
+    src: url(../links/fonts/GenSenRounded2TW-R.otf) format("opentype");
+}
+
+body {
+    background-color: rgba(214, 229, 221, 1);
+    background-image: url(../links/img/最新消息/footerimg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-family: 'GenSenRounded2TW-M';
+    background-size: auto;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ----------緊急電話---------- */
+.emergency-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: rgba(134, 180, 157, 1);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.emergency-btn:hover {
+    background-color: #43705b;
+    transform: scale(1.02);
+}
+
+/* ----------上左半部---------- */
+
+.sidebar {
+    width: 13%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    display: block;
+    color: #43705b;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin: 30px 0;
+    transition: color 0.2s;
+    font-family: "GenSenRounded2TW-M";
+      text-decoration: none; 
+}
+
+.sidebar a span {
+    display: block;
+    font-size: 30px;
+    color: #9bb7aa;
+    margin-bottom: 4px;
+    font-family: "Fredoka";
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+、
+
+.sidebar a:hover {
+  text-decoration: none;
+}
+
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  color: #43705b;
+  text-decoration: none;
+}
+
+.logo {
+    width: 100px;
+    padding-bottom: 10px;
+}
+
+.logo-link:hover .logo {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+    opacity: 0.85;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    margin: 30px 0;
+    color: #43705b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+nav li span {
+    display: block;
+    font-size: 30px;
+    color: #9bb7aa;
+    margin-bottom: 4px;
+    text-decoration: none;
+}
+
+
+
+nav li:hover {
+    color: #2e5547;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+    text-decoration: none;
+}
+
+
+
+
+/* ----------上右半部---------- */
+
+.news-section {}
+
+.news-banner {
+    background-image: url(../links/img/最新消息/newbn.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    text-align: right;
+}
+
+.news-banner h2 {
+    padding-right: 30px;
+    font-size: 16px;
+    color: #43705b;
+}
+
+.news-title {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.news-title h2 {
+    font-size: 32px;
+    color: #43705b;
+}
+
+.news-tags {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tag {
+    padding: 6px 14px;
+    background-color: #e5f0e9;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #43705b;
+}
+
+/* 卡片群組區 */
+.news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+/* 卡片本體 */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.news-card img:hover {
+    opacity: 0.9;
+    filter: sepia(0) hue-rotate(20deg) saturate(50%);
+    transition: all 0.3s ease;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 卡片內文 */
+.card-text {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-weight: bold;
+    color: #43705b;
+}
+
+.card-label {
+    font-size: 14px;
+    text-align: left;
+}
+
+.card-read {
+    font-size: 12px;
+    text-align: right;
+}
+
+.card-date {
+    font-size: 13px;
+    color: #888;
+}
+
+.card-desc h2 {
+    font-size: 20px;
+    color: rgba(134, 180, 157, 1);
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.card-desc p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.3;
+}
+
+
+/**-----footer------**/
+.footer {
+    background-color: rgba(249, 244, 218, 1);
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'GenSenRounded2TW-M';
+}
+
+.footer-frist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.footer-text {
+    line-height: 1.6;
+}
+
+.footer-social img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.button img {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+/**-----go to top-----**/
+#goTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    display: none;
+    background-color: #6aa58c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 16px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#goTopBtn:hover {
+    background-color: #43705b;
+}
+
+

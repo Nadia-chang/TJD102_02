@@ -1,0 +1,550 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: 'GenSenRounded2TW-B';
+    src: url(../links/fonts/GenSenRounded2TW-B.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'GenSenRounded2TW-M';
+    src: url(../links/fonts/GenSenRounded2TW-M.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'GenSenRounded2TW-R';
+    src: url(../links/fonts/GenSenRounded2TW-R.otf) format("opentype");
+}
+
+
+.knewave-regular {
+    font-family: "Knewave", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'GenSenRounded2TW-M';
+    background-color: rgba(214, 229, 221, 1);
+    max-width: 1440px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 810px;
+}
+
+.sidebar {
+    width: 13%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    display: block;
+    color: #43705b;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin: 30px 0;
+    transition: color 0.2s;
+    font-family: "GenSenRounded2TW-M";
+}
+
+.sidebar a span {
+    display: block;
+    font-size: 30px;
+    color: #9bb7aa;
+    margin-bottom: 4px;
+    font-family: "Fredoka";
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.sidebar a:hover {
+    color: #2e4d3e;
+}
+
+.logo {
+    width: 100px;
+    padding-bottom: 10px;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    margin: 30px 0;
+    color: #43705b;
+    font-weight: bold;
+}
+
+nav li span {
+    display: block;
+    font-size: 30px;
+    color: #9bb7aa;
+    margin-bottom: 4px;
+}
+
+
+nav li:hover {
+    color: #2e5547;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+}
+
+
+
+/* ----------上右半部---------- */
+
+.main-content {
+    background: no-repeat;
+    margin-top: 30px;
+    background-image: url(../links/img/index/banner.png);
+    width: 75%;
+    position: relative;
+    padding: 30px 0;
+}
+
+
+.info-bar {
+    position: relative;
+    margin-top: auto;
+    padding-top: 20px;
+
+}
+
+.info-list {
+    position: absolute;
+    bottom: -800px;
+    right: 842px;
+    width: 350px;
+    z-index: 1;
+}
+
+.calendar {
+    width: 580px;
+}
+
+.info-bar h4 {
+    padding-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.yellow-deco {
+    position: absolute;
+    bottom: -710px;
+    right: 110px;
+    width: 320px;
+    z-index: 1;
+}
+
+.gray-deco {
+    position: absolute;
+    bottom: -181px;
+    left: -50px;
+    width: 170px;
+    z-index: 1;
+}
+
+
+/* ----------緊急電話---------- */
+.emergency-btn {
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    background-color: #4a9b7e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.emergency-btn:hover {
+    background-color: #43705b;
+    transform: scale(1.02);
+}
+
+/* ----------最新消息---------- */
+
+.news-section {
+    width: 100%;
+    max-width: 1440px;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.news-header {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-end
+}
+
+.tags .active {
+    background-color: #6aa58c;
+    color: white;
+}
+
+.tags button {
+    background-color: transparent;
+    border: 2px solid #6aa58c;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #6aa58c;
+}
+
+.title {
+    margin-top: 80px;
+}
+
+.title h2 {
+    font-size: 100px;
+    color: rgba(134, 180, 157, 1);
+    font-family: "Knewave", system-ui;
+}
+
+.title p {
+    font-size: 20px;
+    color: rgba(134, 180, 157, 1);
+    margin-top: 10px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.news-list {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 15px 0;
+    font-size: 24px;
+
+}
+
+.date {
+    font-weight: bold;
+    color: rgba(134, 180, 157, 1);
+}
+
+.label {
+    background-color: rgba(134, 180, 157, 1);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.text {
+    flex: 1;
+    color: #444;
+}
+
+hr {
+    border-top: 2px solid rgba(134, 180, 157, 1);
+    margin: 10px 0;
+}
+
+.more {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.more a {
+    color: rgba(134, 180, 157, 1);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.more a:hover {
+    color: white;
+}
+
+/* ----------關於---------- */
+
+.care-section {
+    position: relative;
+    font-family: 'GenSenRounded2TW-M';
+    background-image: url(../links/img/index/long.png);
+
+    height: 900px;
+    /* border: 2px solid red; */
+}
+
+
+.catdog ul {
+    margin-top: 100px;
+    padding-left: 300px;
+    display: inline-block;
+
+}
+
+.catdog h2 {
+    font-size: 100px;
+    color: rgba(134, 180, 157, 1);
+    margin: 20px;
+    font-family: "Knewave", system-ui;
+
+
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    font-size: 25px;
+    color: #aaa;
+    line-height: 2;
+    margin: 0 auto;
+
+}
+
+.cat-photo img {
+    width: 400px;
+
+    display: inline-block;
+    padding-left: 300px;
+
+}
+
+.dog-photo img {
+    width: 500px;
+    position: absolute;
+    top: 150px;
+    right: 400px;
+
+}
+
+.text-block {
+    position: absolute;
+    top: 557px;
+    right: 270px;
+    width: 230px;
+}
+
+.text-block ul {
+    display: inline-block;
+    width: 200px;
+    margin-left: 0 auto;
+}
+
+
+
+.text-block h3 {
+
+    color: rgba(134, 180, 157, 1);
+    font-family: 'GenSenRounded2TW-B';
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.text-block p {
+    padding-top: 5px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.view-more {
+    display: inline-block;
+    margin-top: 12px;
+    color: #666;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.aaa {
+    position: absolute;
+    top: -345px;
+    right: 15px;
+    width: 230px;
+    z-index: 0;
+}
+
+.bbb {
+    position: absolute;
+    top: 115px;
+    right: 735px;
+    width: 180px;
+    z-index: 0;
+}
+
+/**------服務項目------**/
+.services {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'GenSenRounded2TW-M';
+
+}
+
+.services h2 {
+    color: rgba(134, 180, 157, 1);
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.services h2 span {
+    margin-left: 10px;
+    font-weight: bold;
+
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap 0;
+    gap: 1px;
+    background: #fff;
+    padding: 30px 40px 50px 40px;
+    border-radius: 30px;
+}
+
+.service-item img {
+    /* border: 2px solid red; */
+    display: inline-block;
+    width: 211px;
+    padding: 10px;
+    text-align: center;
+}
+
+.service-item .footer-label {
+    color: #3c7c6f;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/**------地圖------**/
+
+.traffic-section {
+    font-family: GenSenRounded TW;
+    background-image: url(../links/img/index/Vector.png);
+    width: 100%;
+
+}
+
+.traffic-section-flex {
+    margin-top: 30px;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+}
+
+.traffic-text {
+    margin-top: 150px;
+    line-height: 1.6;
+}
+
+.traffic-text h2 {
+    font-family: "Knewave", system-ui;
+    color: rgba(134, 180, 157, 1);
+    font-size: 100px;
+}
+
+.traffic-text h1 {
+    font-weight: bold;
+    color: #666;
+    font-size: 36px;
+}
+
+.map {
+    margin-top: 150px;
+    border-radius: 30px;
+}
+
+.tel-father {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.tel {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.contact h4 {
+    color: #5ca686;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+
+/**-----footer------**/
+.footer {
+    background-color: rgba(249, 244, 218, 1);
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'GenSenRounded2TW-M';
+}
+
+
+.footer-frist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.footer-text {
+    line-height: 1.6;
+}
+
+.footer-social img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.button img {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+/**-----go to top-----**/
+#goTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    display: none;
+    background-color: rgba(134, 180, 157, 1);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 16px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#goTopBtn:hover {
+    background-color: #43705b;
+}

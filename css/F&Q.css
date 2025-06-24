@@ -1,0 +1,247 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: 'GenSenRounded2TW-B';
+    src: url(../links/fonts/GenSenRounded2TW-B.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'GenSenRounded2TW-M';
+    src: url(../links/fonts/GenSenRounded2TW-M.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'GenSenRounded2TW-R';
+    src: url(../links/fonts/GenSenRounded2TW-R.otf) format("opentype");
+}
+
+
+body {
+    font-family: 'GenSenRounded2TW-M';
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-image: url(../links/img/F&Q/F&Q-bg.png);
+
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 750px;
+
+}
+
+/* ----------緊急電話---------- */
+.emergency-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: rgba(134, 180, 157, 1);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.emergency-btn:hover {
+    background-color: #43705b;
+    transform: scale(1.02);
+}
+
+/* ----------上左半部---------- */
+.sidebar {
+    width: 13%;
+    padding: 40px;
+    margin-right: 80px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: #43705b;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin: 30px 0;
+    transition: color 0.2s;
+    font-family: "GenSenRounded2TW-M";
+}
+
+.sidebar a span {
+    display: block;
+    font-size: 30px;
+    color: #9bb7aa;
+    margin-bottom: 4px;
+    font-family: "Fredoka";
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.sidebar a:hover {
+    color: #2e4d3e;
+}
+
+.logo {
+    width: 100px;
+    padding-bottom: 10px;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    margin: 30px 0;
+    color: #43705b;
+}
+
+nav li span {
+    display: block;
+    font-size: 30px;
+    color: #9bb7aa;
+    margin-bottom: 4px;
+}
+
+
+nav li:hover {
+    color: #2e5547;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+}
+
+/* ----------F&Q---------- */
+.faq-section {
+    max-width: 700px;
+    margin: auto;
+}
+
+.faq-section h1 {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 28px;
+    color: #4c9d89;
+    margin-bottom: 30px;
+}
+
+.faq-section .brand {
+    font-family: "Knewave";
+    font-weight: bold;
+    font-size: 80px;
+    color: #4c9d89;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.q-icon {
+    background-color: #4c9d89;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.toggle-icon {
+    margin-left: auto;
+    font-size: 24px;
+    color: #4c9d89;
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 20px 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 展開時樣式 */
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-item.open .toggle-icon {
+    transform: rotate(45deg);
+}
+
+/**-----footer------**/
+.footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'GenSenRounded2TW-M';
+}
+
+
+.footer-frist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.footer-text {
+    line-height: 1.6;
+}
+
+.footer-social img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.button img {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+/**-----go to top-----**/
+#goTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    display: none;
+    background-color: rgba(134, 180, 157, 1);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 16px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#goTopBtn:hover {
+    background-color: #43705b;
+}
