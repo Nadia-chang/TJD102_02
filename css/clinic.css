@@ -428,13 +428,22 @@ nav li:hover {
         transform: translateY(-10px) rotate(-45deg);
     }
 
+    .Clinic-inside h2 span {
+        margin: 20px;
+    }
 
     .map-text-main {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column-reverse;
         gap: 10px;
+        margin: 20px;
+
+    }
+
+    .time-section h2 span {
+        margin: 20px;
 
     }
 

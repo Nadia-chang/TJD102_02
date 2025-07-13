@@ -15,6 +15,14 @@
     src: url(../links/fonts/GenSenRounded2TW-R.otf) format("opentype");
 }
 
+#goTopBtn {
+  display: none; /* 預設桌機版隱藏 */
+}
+
+.nav-logo{
+    transform: scale(0.7)
+}
+
 body {
     font-family: 'GenSenRounded2TW-M';
     ;
