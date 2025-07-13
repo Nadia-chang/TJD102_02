@@ -22,24 +22,42 @@
 </head>
 
 <body>
-    <!--上半部左邊選單-->
-    <div class="container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="../html/index.html"><img src="../links/img/index/moogood-logo.png" alt="Logo"
-                                class="logo" /></a></li>
-                    <li><a href="../html/news.html"><span>NEWS</span> 最新消息</a></li>
-                    <li><a href="../html/clinic.html"><span>INFO</span> 診所資訊</a></li>
-                    <li><a href="../html/serve.html"><span>SERVE</span> 服務項目</a></li>
-                    <li><a href="../html/F&Q.html"><span>FAQ</span> 常見問題</a></li>
-                    <li><a href="../html/connect.html"><span>CONNECT</span> 聯繫我們</a></li>
-                </ul>
-            </nav>
-            <div class="Clinic-top">
-                <button class="emergency-btn">24小時急診專線&nbsp;<i class="fa-solid fa-phone-flip"></i></i></button>
-            </div>
-        </aside>
+   <div class="container">
+    <!-- Sidebar + 漢堡選單 -->
+    <aside class="sidebar">
+      <!-- 漢堡按鈕（手機版顯示） -->
+      <button class="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- 導覽列 -->
+      <nav class="sidebar-nav">
+        <ul class="nav-menu" role="menu">
+          <li class="nav-item logo-item" role="menuitem">
+            <a href="../html/index.html" class="nav-link">
+              <img src="../links/img/index/moogood-logo.png" alt="Logo" class="logo" />
+            </a>
+          </li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/news.html" class="nav-link"><span>NEWS</span> 最新消息</a>
+          </li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/clinic.html" class="nav-link"><span>INFO</span> 診所資訊</a>
+          </li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/serve.html" class="nav-link"><span>SERVE</span> 服務項目</a>
+          </li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/F&Q.html" class="nav-link"><span>FAQ</span> 常見問題</a>
+          </li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/connect.html" class="nav-link"><span>CONNECT</span> 聯繫我們</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
         <section class="news-section">
             <div class="news-title">
@@ -148,29 +166,30 @@
 
         </div>
     </footer>
+<!---- go to top & 漢堡 js ---->
 
-    <button id="goTopBtn" title="回到頂部"><i class="fa-solid fa-arrow-up"></i></button>
+  <button id="goTopBtn" title="回到頂部"><i class="fa-solid fa-arrow-up"></i></button>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const goTopBtn = document.getElementById("goTopBtn");
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".sidebar-nav");
 
-    <!---- js go to top ---->
-    <script>
-        const goTopBtn = document.getElementById("goTopBtn");
+      window.addEventListener("scroll", () => {
+        goTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      });
 
-        window.addEventListener("scroll", () => {
-            if (document.documentElement.scrollTop > 300) {
-                goTopBtn.style.display = "block";
-            } else {
-                goTopBtn.style.display = "none";
-            }
-        });
+      goTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
 
-        goTopBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 
 </html>

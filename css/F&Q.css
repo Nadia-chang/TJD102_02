@@ -15,30 +15,9 @@
     src: url(../links/fonts/GenSenRounded2TW-R.otf) format("opentype");
 }
 
-
-@import url(reset.css);
-
-@font-face {
-    font-family: 'GenSenRounded2TW-B';
-    src: url(../links/fonts/GenSenRounded2TW-B.otf) format("opentype");
-}
-
-@font-face {
-    font-family: 'GenSenRounded2TW-M';
-    src: url(../links/fonts/GenSenRounded2TW-M.otf) format("opentype");
-}
-
-@font-face {
-    font-family: 'GenSenRounded2TW-R';
-    src: url(../links/fonts/GenSenRounded2TW-R.otf) format("opentype");
-}
-
-
-
 .hamburger {
     display: none;
 }
-
 
 body {
     font-family: 'GenSenRounded2TW-M';
@@ -52,13 +31,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
 }
 
 .container {
     flex: 1;
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
 }
 
 img {
@@ -79,6 +60,7 @@ img {
     border-radius: 50px;
     font-size: 20px;
     font-weight: bold;
+    transition: transform 0.3s ease;
 }
 
 .emergency-btn:hover {
@@ -86,7 +68,7 @@ img {
     transform: scale(1.02);
 }
 
-/* ----------上左半部---------- */
+/* ----------左側側邊欄---------- */
 .sidebar {
     width: 220px;
     padding: 40px 20px;
@@ -100,8 +82,8 @@ img {
     text-decoration: none;
     text-align: center;
     margin: 30px 0;
-    transition: color 0.2s;
     font-family: "GenSenRounded2TW-M";
+    transition: color 0.2s;
 }
 
 .sidebar a span {
@@ -139,7 +121,6 @@ nav li span {
     margin-bottom: 4px;
 }
 
-
 nav li:hover {
     color: #2e5547;
     cursor: pointer;
@@ -147,8 +128,7 @@ nav li:hover {
     transition: transform 0.1s ease;
 }
 
-
-/* ----------右邊的圖---------- */
+/* ----------主內容---------- */
 .main-content {
     flex: 1;
     display: flex;
@@ -157,9 +137,11 @@ nav li:hover {
 
 /* ----------F&Q---------- */
 .faq-section {
-    max-width: 700px;
-    margin: auto;
     flex: 1;
+    padding: 40px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: auto;
 }
 
 .faq-section h1 {
@@ -223,265 +205,14 @@ nav li:hover {
 
 .faq-item.open .faq-answer {
     max-height: 500px;
-    /* 根據實際內容調整這個數字 */
     padding-bottom: 20px;
-}
-
-/* 展開時樣式 */
-.faq-item.open .faq-answer {
-    display: block;
 }
 
 .faq-item.open .toggle-icon {
     transform: rotate(45deg);
 }
 
-.faq-section {
-    flex: 1;
-    padding: 40px;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-/**-----footer------**/
-.footer {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    font-family: 'GenSenRounded2TW-M';
-}
-
-
-.footer-frist {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.footer-logo img {
-    width: 150px;
-    height: auto;
-    display: block;
-}
-
-.footer-text {
-    line-height: 1.6;
-}
-
-.footer-social img {
-    width: 150px;
-    height: auto;
-    display: block;
-}
-
-.button img {
-    width: 140px;
-    height: auto;
-    display: block;
-}
-
-/**-----go to top-----**/
-#goTopBtn {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    z-index: 999;
-    display: none;
-    background-color: rgba(134, 180, 157, 1);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 16px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#goTopBtn:hover {
-    background-color: #43705b;
-}
-
-
-.container {
-    display: flex;
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-}
-
-img {
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* ----------緊急電話---------- */
-.emergency-btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    background-color: rgba(134, 180, 157, 1);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.emergency-btn:hover {
-    background-color: #43705b;
-    transform: scale(1.02);
-}
-
-/* ----------上左半部---------- */
-.sidebar {
-    width: 220px;
-    padding: 40px 20px;
-    box-sizing: border-box;
-}
-
-.sidebar a {
-    display: block;
-    color: #43705b;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    margin: 30px 0;
-    transition: color 0.2s;
-    font-family: "GenSenRounded2TW-M";
-}
-
-.sidebar a span {
-    display: block;
-    font-size: 30px;
-    color: #9bb7aa;
-    margin-bottom: 4px;
-    font-family: "Fredoka";
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-.sidebar a:hover {
-    color: #2e4d3e;
-}
-
-.logo {
-    width: 100px;
-    padding-bottom: 10px;
-}
-
-nav ul {
-    text-align: center;
-}
-
-nav li {
-    margin: 30px 0;
-    color: #43705b;
-}
-
-nav li span {
-    display: block;
-    font-size: 30px;
-    color: #9bb7aa;
-    margin-bottom: 4px;
-}
-
-
-nav li:hover {
-    color: #2e5547;
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: transform 0.1s ease;
-}
-
-
-/* ----------右邊的圖---------- */
-.main-content {
-
-    flex: 1;
-}
-
-/* ----------F&Q---------- */
-.faq-section {
-    max-width: 700px;
-    margin: auto;
-}
-
-.faq-section h1 {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    font-size: 28px;
-    color: #4c9d89;
-    margin-bottom: 30px;
-}
-
-.faq-section .brand {
-    font-family: "Knewave";
-    font-weight: bold;
-    font-size: 80px;
-    color: #4c9d89;
-}
-
-.faq-item {
-    background: white;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.faq-question {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-    cursor: pointer;
-}
-
-.q-icon {
-    background-color: #4c9d89;
-    color: white;
-    font-weight: bold;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-}
-
-.toggle-icon {
-    margin-left: auto;
-    font-size: 24px;
-    color: #4c9d89;
-    transition: transform 0.3s;
-}
-
-.faq-answer {
-    display: none;
-    padding: 0 20px 20px 20px;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* 展開時樣式 */
-.faq-item.open .faq-answer {
-    display: block;
-}
-
-.faq-item.open .toggle-icon {
-    transform: rotate(45deg);
-}
-
-.faq-section {
-    flex: 1;
-    padding: 40px;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-/**-----footer------**/
+/* ----------Footer---------- */
 .footer {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -489,25 +220,17 @@ nav li:hover {
     margin-top: auto;
 }
 
-
 .footer-frist {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
-.footer-logo img {
-    width: 150px;
-    height: auto;
-    display: block;
-}
-
-.footer-text {
-    line-height: 1.6;
-}
-
-.footer-social img {
+.footer-logo img,
+.footer-social img,
+.button img {
     width: 150px;
     height: auto;
     display: block;
@@ -515,11 +238,13 @@ nav li:hover {
 
 .button img {
     width: 140px;
-    height: auto;
-    display: block;
 }
 
-/**-----go to top-----**/
+.footer-text {
+    line-height: 1.6;
+}
+
+/* ----------Go To Top---------- */
 #goTopBtn {
     position: fixed;
     bottom: 40px;
@@ -540,63 +265,42 @@ nav li:hover {
     background-color: #43705b;
 }
 
+/* ----------RWD---------- */
 @media screen and (max-width: 750px) {
-    .container {
-        background-repeat: no-repeat;
-        background-size: cover;
-        flex-direction: column;
-        display: flex;
-
-
-    }
-
-    .sidebar-nav.active {
-        display: flex;
-
-    }
-
-
-
-    .sidebar-nav {
-        display: none;
-        flex-direction: column;
-        background-color: #fff;
-        padding: 10px 20px;
-    }
-
     body {
         max-width: 100%;
         overflow-x: hidden;
     }
 
-
-    /* footer */
-    .footer-frist {
-        display: flex;
+    .container {
+        background-repeat: no-repeat;
+        background-size: cover;
         flex-direction: column;
+        display: flex;
     }
 
-    /* 漢堡選單 */
+    .sidebar {
+        width: 100%;
 
+    }
 
     .sidebar-nav {
         display: none;
         flex-direction: column;
+
         padding: 10px 20px;
-          z-index: 1000;
-
-    }
-
-    .sidebar {
-        width: 85%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
     }
 
     .sidebar-nav.active {
-        display: flex;
+        display: block;
     }
 
-    .hamburger {
-        display: none;
+    .main-content {
+        display: ;
     }
 
     .hamburger {
@@ -610,7 +314,6 @@ nav li:hover {
         background: none;
         border: none;
         z-index: 1009;
-
     }
 
     .bar {
@@ -619,18 +322,8 @@ nav li:hover {
         background-color: #333;
         border-radius: 2px;
         transition: all 0.3s ease;
-
     }
 
-    .main-content img {
-        height: auto;
-        display: block;
-        width: 150%;
-        margin-left: -25%;
-    }
-
-
-    /* 漢堡變 X */
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
     }
@@ -642,17 +335,13 @@ nav li:hover {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-10px) rotate(-45deg);
     }
-    .sidebar-nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: none;
-        background-color: #fff;
-        z-index: 1000;
+
+    .main-content img {
+        width: 150%;
+        margin-left: -25%;
     }
 
-    .sidebar-nav.active {
-        display: block;
+    .footer-frist {
+        flex-direction: column;
     }
 }

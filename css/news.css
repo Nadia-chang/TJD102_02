@@ -15,6 +15,10 @@
     src: url(../links/fonts/GenSenRounded2TW-R.otf) format("opentype");
 }
 
+.hamburger {
+    display: none;
+}
+
 body {
     background-color: rgba(214, 229, 221, 1);
     background-image: url(../links/img/news/footerimg.png);
@@ -68,7 +72,7 @@ body {
     margin: 30px 0;
     transition: color 0.2s;
     font-family: "GenSenRounded2TW-M";
-      text-decoration: none; 
+    text-decoration: none;
 }
 
 .sidebar a span {
@@ -80,18 +84,17 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
 }
-、
 
-.sidebar a:hover {
-  text-decoration: none;
+、 .sidebar a:hover {
+    text-decoration: none;
 }
 
 .sidebar a,
 .sidebar a:visited,
 .sidebar a:hover,
 .sidebar a:active {
-  color: #43705b;
-  text-decoration: none;
+    color: #43705b;
+    text-decoration: none;
 }
 
 .logo {
@@ -320,14 +323,75 @@ nav li:hover {
 #goTopBtn:hover {
     background-color: #43705b;
 }
-@media screen and (max-width: 750px) {
 
- /* footer */
+@media screen and (max-width: 750px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* footer */
     .footer-frist {
         display: flex;
         flex-direction: column;
     }
 
+    /* 漢堡選單 */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        margin: 20px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 1001;
+    }
+
+    .bar {
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* 漢堡變 X */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .sidebar {
+        width:100%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+    }
+
+    .sidebar-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 10px 20px;
+    }
+
+    .sidebar-nav.active {
+        display: flex;
+    }
+
+    .main-content {
+        display: none;
+    }
 
 }
-
