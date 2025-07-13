@@ -39,8 +39,6 @@ body {
     width: 1200px;
     margin: 89px auto;
     position: relative;
-
-
 }
 
 .photop1 {
@@ -432,12 +430,12 @@ label a {
 @media screen and (max-width: 600px) {}
 
 
-/* ▼ 有下拉選單的 <li> */
+/*  有下拉選單的 <li> */
 .has-sub {
     position: relative;
 }
 
-/* ▼ 第二層選單 */
+/*  第二層選單 */
 .sub-menu {
     display: none;
     position: absolute;
@@ -491,7 +489,7 @@ nav ul {
     margin: 0;
 }
 
-/* ▼ 緊急按鈕不要塞進 ul，與 nav 並排即可 */
+/* 緊急按鈕不要塞進 ul，與 nav 並排即可 */
 .emergency-btn {
     white-space: nowrap;
     margin-left: auto;
@@ -503,7 +501,7 @@ nav ul {
     position: relative;
 }
 
-/*  第二層選單 */
+/* 第二層選單 */
 .sub-menu {
     display: none;
     flex-direction: column;
