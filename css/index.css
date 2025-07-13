@@ -16,6 +16,7 @@
 }
 
 
+
 .knewave-regular {
     font-family: "Knewave", system-ui;
     font-weight: 400;
@@ -62,6 +63,7 @@ body {
     font-size: 30px;
     color: #9bb7aa;
     margin-bottom: 4px;
+    font-family: "Fredoka";
 }
 
 .sidebar a:hover {
