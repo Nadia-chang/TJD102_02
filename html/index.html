@@ -14,32 +14,51 @@
   <!-- 引入 Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Knewave&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
   <!-- 引入 徽標 -->
   <link rel="shortcut icon" href="../links/img/index/徽標.png" type="image/x-icon">
 
 </head>
 
 
-
 <body>
-  <!--上半部左邊選單-->
   <div class="container">
+    <!-- Sidebar + 漢堡選單 -->
     <aside class="sidebar">
+      <!-- 漢堡按鈕（手機版顯示） -->
+      <button class="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-      <nav>
-        <ul>
-          <li><a href="../html/index.html"><img src="../links/img/index/moogood-logo.png" alt="Logo" class="logo" /></a>
+      <!-- 導覽列 -->
+      <nav class="sidebar-nav">
+        <ul class="nav-menu" role="menu">
+          <li class="nav-item logo-item" role="menuitem">
+            <a href="../html/index.html" class="nav-link">
+              <img src="../links/img/index/moogood-logo.png" alt="Logo" class="logo" />
+            </a>
           </li>
-          <li><a href="../html/news.html"><span>NEWS</span> 最新消息</a></li>
-          <li><a href="../html/clinic.html"><span>INFO</span> 診所資訊</a></li>
-          <li><a href="../html/serve.html"><span>SERVE</span> 服務項目</a></li>
-          <li><a href="../html/F&Q.html"><span>FAQ</span> 常見問題</a></li>
-          <li><a href="../html/context.html"><span>CONNECT</span> 聯繫我們</a></li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/news.html" class="nav-link"><span>NEWS</span> 最新消息</a>
+          </li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/clinic.html" class="nav-link"><span>INFO</span> 診所資訊</a>
+          </li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/serve.html" class="nav-link"><span>SERVE</span> 服務項目</a>
+          </li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/F&Q.html" class="nav-link"><span>FAQ</span> 常見問題</a>
+          </li>
+          <li class="nav-item" role="menuitem">
+            <a href="../html/context.html" class="nav-link"><span>CONNECT</span> 聯繫我們</a>
+          </li>
         </ul>
       </nav>
     </aside>
+
 
     <!--上半部右邊圖片-->
     <main class="main-content">
@@ -206,28 +225,31 @@
     </div>
   </footer>
 
-  <!---- go to top js ---->
+  <!---- go to top & 漢堡 js ---->
 
   <button id="goTopBtn" title="回到頂部"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script>
-    const goTopBtn = document.getElementById("goTopBtn");
+    document.addEventListener("DOMContentLoaded", () => {
+      const goTopBtn = document.getElementById("goTopBtn");
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".sidebar-nav");
 
-    window.addEventListener("scroll", () => {
-      if (document.documentElement.scrollTop > 300) {
-        goTopBtn.style.display = "block";
-      } else {
-        goTopBtn.style.display = "none";
-      }
-    });
+      window.addEventListener("scroll", () => {
+        goTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      });
 
-    goTopBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+      goTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
       });
     });
   </script>
+
 </body>
 
 </html>

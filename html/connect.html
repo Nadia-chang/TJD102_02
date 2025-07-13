@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毛上好犬貓專科</title>
+
+    <!-- 相對路徑 絕對路徑 -->
+    <link rel="stylesheet" href="../css/connect.css">
+
+    <!-- 引入  Fonts awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Knewave&display=swap"
+        rel="stylesheet">
+    <!-- 引入 徽標 -->
+    <link rel="shortcut icon" href="../links/img/index/徽標.png" type="image/x-icon">
+    <!-- 引入 JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../JQuery/connect.js"></script>
+
+</head>
+
+<body>
+    <header id="qodef-page-mobile-header">
+        <nav class="header-nav">
+
+            <!-- ☰ 漢堡：行動版才看到 -->
+            <button class="hamburger" aria-label="開啟選單">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- 左：LOGO -->
+            <div class="nav-logo">
+                <a href="../html/index.html">
+                    <img src="../links/img/connect/moogood-logo-s.png" alt="毛上好 LOGO">
+                </a>
+            </div>
+
+            <!-- 中：主選單 -->
+            <ul class="nav-menu">
+                <li><a href="../html/news.html"><span>NEWS</span>最新消息</a></li>
+                <li><a href="../html/clinic.html"><span>INFO</span>診所資訊</a></li>
+
+                <li class="has-sub">
+                    <a href="../html/serve.html"><span>SERVE</span>服務項目</a>
+
+                </li>
+
+                <li><a href="../html/F&Q.html"><span>FAQ</span>常見問題</a></li>
+                <li><a href="../html/connect.html"><span>CONNECT</span>聯繫我們</a></li>
+            </ul>
+
+            <!-- 右：急診按鈕 -->
+            <div class="nav-btn">
+                <a href="facetime:+886223581199" class="emergency-btn">
+                    24小時急診專線&nbsp;<i class="fa-solid fa-phone-flip"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- 壓在底圖 -->
+        <img src="../links/img/connect/Frame 35.svg" alt="" class="photop1">
+        <!-- 壓在底圖的pattern -->
+        <img src="../links/img/connect/context-bgcat.svg" alt="" class="photop2">
+        <img src="../links/img/connect/context-bgm.svg" alt="" class="photop3">
+
+        <section class="contact-section">
+            <h1><span>Connect</span><br>聯絡我們</h1>
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">電話</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">mail</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pet">毛小孩類型</label>
+                        <!-- <input type="text" id="pet" name="pet"> -->
+                        <select class="select-css" name="continent" id="continent">
+                            <option value="africa">貓貓</option>
+                            <option value="antarctica">狗狗</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-full">
+                    <label for="message">想詢問的事情</label>
+                    <textarea name="" id="message" cols="10" rows="10"> </textarea>
+                </div>
+
+
+
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="subscribe">
+                    <label for="subscribe">接收有關 毛上好活動資訊的電子郵件</label><br>
+                    <input type="checkbox" id="agree">
+                    <label for="agree">我同意 <a href="#">隱私權政策</a></label>
+                </div>
+
+
+
+                <div class="form-submit">
+                    <button type="submit">送出</button>
+                </div>
+
+            </form>
+
+        </section>
+    </div>
+    <!---- footer ---->
+    <footer class="footer">
+        <div class="footer-frist">
+            <div class="footer-logo">
+                <img src="../links/img/index/moogood-logo-s.png" alt="">
+            </div>
+
+
+            <div class="footer-text">
+                <h5>(02) 2358-1199</br>台北市新生南路一段162號1樓</h5>
+            </div>
+
+
+            <div class="footer-social">
+                <img src="../links/img/index/social-midia.png" alt="">
+            </div>
+
+
+            <div class="button">
+                <img src="../links/img/index/24hrbt.png" alt="">
+            </div>
+        </div>
+    </footer>
+    <!-- ✅ goTopBtn 放在 script 外，放在 body 結尾即可 -->
+    <button id="goTopBtn" title="回到頂部" style="display: none;">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const goTopBtn = document.getElementById("goTopBtn");
+
+            // 滾動時顯示 / 隱藏「回到頂部」
+            window.addEventListener("scroll", () => {
+                goTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+            });
+
+            goTopBtn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            // 點擊漢堡選單切換
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>

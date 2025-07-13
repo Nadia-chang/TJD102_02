@@ -21,6 +21,11 @@ body {
     width: 100%;
     height: auto;
     background-size: cover;
+    background-image: url(../links/img/serve/bg.png);
+}
+
+.hamburger {
+    display: none;
 }
 
 .container {
@@ -97,12 +102,10 @@ nav li:hover {
 
 /* ----------上右半部---------- */
 
-.Clinic-top {
-    background-image: url(../links/img/服務項目/serve.-bn.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-
+.main-content img {
+    height: auto;
+    display: block;
+    width: 110%;
 }
 
 /* ----------緊急電話---------- */
@@ -290,4 +293,118 @@ nav li:hover {
 
 #goTopBtn:hover {
     background-color: #43705b;
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .sidebar-nav.active {
+        display: flex;
+
+    }
+
+
+
+    .sidebar-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 10px 20px;
+    }
+
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* footer */
+    .footer-frist {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 漢堡選單 */
+
+
+    .sidebar-nav {
+        display: none;
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .sidebar {
+        width: 85%;
+    }
+
+    .sidebar-nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        margin: 20px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 1001;
+
+    }
+
+    .bar {
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+
+    }
+
+    .main-content img {
+        height: auto;
+        display: block;
+        width: 100%;
+        margin-left: 0%;
+    }
+
+
+    /* 漢堡變 X */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .sidebar-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    .sidebar-nav.active {
+        display: block;
+    }
 }

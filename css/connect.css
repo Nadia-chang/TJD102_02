@@ -1,0 +1,691 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: 'GenSenRounded2TW-B';
+    src: url(../links/fonts/GenSenRounded2TW-B.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'GenSenRounded2TW-M';
+    src: url(../links/fonts/GenSenRounded2TW-M.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'GenSenRounded2TW-R';
+    src: url(../links/fonts/GenSenRounded2TW-R.otf) format("opentype");
+}
+
+body {
+    font-family: 'GenSenRounded2TW-M';
+    ;
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-color: rgba(214, 229, 221, 1);
+    background-image: url(../links/img/connect/contextbgyellow.svg);
+}
+
+.container {
+    max-width: 100%;
+    width: 1200px;
+    margin: 89px auto;
+    position: relative;
+
+
+}
+
+.photop1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* 壓到最底層 */
+
+    transform: scale(1.2)
+}
+
+.photop2 {
+    position: absolute;
+    top: 80%;
+    /* 大約容器 65% 高 */
+    left: 55%;
+    z-index: -1;
+    transform: scale(0.8)
+        /* 壓到最底層 */
+}
+
+.photop3 {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    z-index: -1;
+    transform: scale(1.2);
+    /* 壓到最底層 */
+
+}
+
+/* ----------上左半部---------- */
+
+
+.sidebar a {
+    display: block;
+    color: #43705b;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.2s;
+    font-family: "GenSenRounded2TW-M";
+}
+
+.sidebar a span {
+    display: block;
+    font-size: 30px;
+    color: #9bb7aa;
+    font-family: "Fredoka";
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.sidebar a:hover {
+    color: #2e4d3e;
+}
+
+.logo {
+    width: 50px;
+}
+
+nav ul {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* li 之間間距 */
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav li {
+    color: #43705b;
+    font-size: 20px;
+}
+
+nav li span {
+    display: block;
+    font-size: 12px;
+    color: #9bb7aa;
+    margin-bottom: 4px;
+}
+
+
+.nav li:hover {
+    color: #2e5547;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+}
+
+.nav-menu a {
+    color: #43705b;
+    /* 你原本的主色 */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 當滑鼠 hover 時的樣式 */
+.nav-menu a:hover {
+    color: #2e4d3e;
+    text-decoration: none;
+}
+
+/* 防止手機版或瀏覽器預設的 visited 紫色 */
+.nav-menu a:visited {
+    color: #43705b;
+}
+
+/* 防止被點過之後變色 */
+.nav-menu a:active {
+    color: #43705b;
+}
+
+
+/* ----------緊急電話---------- */
+.emergency-btn {
+    background-color: rgba(134, 180, 157, 1);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.emergency-btn:hover {
+    background-color: #43705b;
+    transform: scale(1.02);
+}
+
+/* ----------上右半部---------- */
+
+.contact-section {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+/* ----------表單---------- */
+
+.contact-section h1 span {
+    font-family: "Knewave";
+    font-size: 100px;
+    color: rgba(232, 241, 236, 1);
+}
+
+.contact-section h1 {
+    font-family: 'GenSenRounded2TW-B';
+    font-size: 24px;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    color: rgba(232, 241, 236, 1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: rgba(232, 241, 236, 1);
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 40px;
+    background-color: white;
+    color: rgb(30, 30, 30);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.select-css {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 40px;
+    background-color: white;
+    color: rgb(30, 30, 30);
+    font-size: 16px;
+}
+
+
+.form-full {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.form-full input {
+    width: 100%;
+}
+
+#message {
+    width: 100%;
+    height: 50px;
+    resize: none;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+
+textarea {
+    border-radius: 50px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #2c5f50;
+    border-radius: 4px;
+    margin-right: 0.8rem;
+    cursor: pointer;
+    position: relative;
+
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    font-size: 18px;
+    color: #2c5f50;
+}
+
+label a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+/**-----送出鍵------**/
+.contact-form button[type="submit"] {
+    background-color: rgba(86, 154, 128, 1);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'GenSenRounded2TW-B';
+}
+
+
+
+.contact-form button[type="submit"]:hover {
+    background-color: rgba(214, 229, 221, 1);
+    color: rgba(86, 154, 128, 1);
+}
+
+/**-----footer------**/
+.footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: rgba(249, 244, 218, 1);
+    font-family: 'GenSenRounded2TW-M';
+}
+
+
+.footer-frist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.footer-text {
+    line-height: 1.6;
+}
+
+.footer-social img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.button img {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #43705b;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* 顯示選單 */
+.mobile-nav.active {
+    display: flex;
+}
+
+@media screen and (max-width: 800px) {
+
+
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group input,
+    .select-css {
+        width: 100%;
+    }
+
+    .form-full textarea {
+        width: 100%;
+    }
+
+    .contact-section h1 span {
+        font-size: 60px;
+    }
+
+    .contact-section h1 {
+        font-size: 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {}
+
+
+/* ▼ 有下拉選單的 <li> */
+.has-sub {
+    position: relative;
+}
+
+/* ▼ 第二層選單 */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    border: 1px solid #ccc;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sub-menu li {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    text-align: left;
+    color: #43705b;
+}
+
+.sub-menu li:hover {
+    background-color: #f3f5f4;
+    color: #2e5547;
+}
+
+/*  hover 顯示 submenu */
+.has-sub:hover .sub-menu {
+    display: block;
+}
+
+/* logo 與 menu 垂直置中，與按鈕排成一列 */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+/*  主選單列表 */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ▼ 緊急按鈕不要塞進 ul，與 nav 並排即可 */
+.emergency-btn {
+    white-space: nowrap;
+    margin-left: auto;
+    /* 把它推到右側 */
+}
+
+/* 有下拉選單的 <li> */
+.has-sub {
+    position: relative;
+}
+
+/*  第二層選單 */
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    /* 相對於 .header-nav 定位 */
+    top: 0;
+    /*  從最上方開始 */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    padding: 100px 0 40px;
+    /* 預留下方內距，避免太貼 */
+    gap: 24px;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sub-menu li {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    text-align: left;
+    color: #43705b;
+}
+
+.sub-menu li:hover {
+    background-color: #f3f5f4;
+    color: #2e5547;
+}
+
+/* hover 顯示 submenu */
+.has-sub:hover .sub-menu {
+    display: block;
+}
+
+/* logo 與 menu 垂直置中*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+/*  主選單列表 */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*  緊急按鈕不要塞進 ul，與 nav 並排即可 */
+.emergency-btn {
+    white-space: nowrap;
+    margin-left: auto;
+    /* 把它推到右側 */
+}
+
+@media screen and (max-width: 750px) {
+
+
+    .header-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        z-index: 100;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1000;
+        padding-top: 100px;
+        padding-bottom: 40px;
+        gap: 24px;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-btn {
+        margin-top: 10px;
+    }
+
+    .nav-logo {
+        margin: 0 auto;
+    }
+
+    .contact-section h1 {
+        margin-bottom: 8px;
+    }
+
+    .contact-section h1 span {
+        font-size:88px;
+    }
+
+
+        /* 緊急按鈕 */
+        .emergency-btn {
+            display: none;
+        }
+
+        /* 漢堡 */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+            position: relative;
+        }
+
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #43705b;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+
+        .photop1 {
+            pointer-events: none;
+            transform: scale(1.5)
+        }
+
+        .photop2,
+        .photop3 {
+            pointer-events: none;
+            display: none;
+        }
+
+
+
+
+        /* gototop btn */
+        #goTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            background-color: #43705b;
+            color: white;
+            border: none;
+            padding: 15px 18px;
+            font-size: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            /* 預設隱藏 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        #goTopBtn:hover {
+            background-color: #2e4d3e;
+            transform: scale(1.1);
+        }
+
+        .footer-frist {
+            display: flex;
+            flex-direction: column;
+        }
+    }

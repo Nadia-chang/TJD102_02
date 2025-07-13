@@ -15,6 +15,10 @@
     src: url(../links/fonts/GenSenRounded2TW-R.otf) format("opentype");
 }
 
+.hamburger {
+    display: none;
+}
+
 body {
     font-family: 'GenSenRounded2-R';
     background-image: url(../links/img/診所環境/footerbg.png);
@@ -110,7 +114,7 @@ nav li:hover {
 
 .Clinic-top {
     margin-top: 70px;
-    background-image: url(../links/img/診所環境/Group.png);
+    background-image: url(../links/img/info/inside2.png);
     background-repeat: no-repeat;
     background-size: contain;
     /* border: 5px solid red; */
@@ -237,7 +241,9 @@ nav li:hover {
 }
 
 .time-section img {
-    width: 800px;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .time-section h2 span {
@@ -320,4 +326,137 @@ nav li:hover {
 
 #goTopBtn:hover {
     background-color: #43705b;
+}
+
+
+
+
+@media screen and (max-width: 750px) {
+    .container {
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        display: flex;
+
+
+    }
+
+    .sidebar {
+        width: 85%;
+    }
+
+    .sidebar-nav.active {
+        display: flex;
+
+    }
+
+
+
+    .sidebar-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 10px 20px;
+    }
+
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* footer */
+    .footer-frist {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 漢堡選單 */
+
+
+    .sidebar-nav {
+        display: none;
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .sidebar-nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        margin: 20px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 1001;
+
+    }
+
+    .bar {
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+
+    }
+
+    .main-content img {
+        height: auto;
+        display: block;
+        width: 150%;
+        margin-left: -25%;
+    }
+
+
+    /* 漢堡變 X */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+
+    .map-text-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 10px;
+
+    }
+
+    .time-section img {
+        max-width: 60%;
+    }
+
+    .time-section .cat {
+        display: none;
+    }
+
+    .sidebar-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    .sidebar-nav.active {
+        display: block;
+    }
 }

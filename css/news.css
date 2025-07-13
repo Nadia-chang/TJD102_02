@@ -17,7 +17,7 @@
 
 body {
     background-color: rgba(214, 229, 221, 1);
-    background-image: url(../links/img/最新消息/footerimg.png);
+    background-image: url(../links/img/news/footerimg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -143,7 +143,7 @@ nav li:hover {
 .news-section {}
 
 .news-banner {
-    background-image: url(../links/img/最新消息/newbn.png);
+    background-image: url(../links/img/news/newbn.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -320,5 +320,14 @@ nav li:hover {
 #goTopBtn:hover {
     background-color: #43705b;
 }
+@media screen and (max-width: 750px) {
 
+ /* footer */
+    .footer-frist {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
 

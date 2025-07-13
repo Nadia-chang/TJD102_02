@@ -26,6 +26,7 @@ body {
     font-family: 'GenSenRounded2TW-M';
     background-color: rgba(214, 229, 221, 1);
     max-width: 1440px;
+    margin: 0 auto;
     width: 100%;
 }
 
@@ -42,6 +43,10 @@ body {
     flex-direction: column;
 }
 
+.hamburger {
+    display: none;
+}
+
 .sidebar a {
     display: block;
     color: #43705b;
@@ -50,7 +55,6 @@ body {
     text-align: center;
     margin: 30px 0;
     transition: color 0.2s;
-    font-family: "GenSenRounded2TW-M";
 }
 
 .sidebar a span {
@@ -58,9 +62,6 @@ body {
     font-size: 30px;
     color: #9bb7aa;
     margin-bottom: 4px;
-    font-family: "Fredoka";
-    font-weight: 600;
-    letter-spacing: 2px;
 }
 
 .sidebar a:hover {
@@ -158,7 +159,7 @@ nav li:hover {
     position: absolute;
     top: 0px;
     right: -50px;
-    background-color: rgba(134, 180, 157, 1);
+    background-color: #4a9b7e;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -223,7 +224,10 @@ nav li:hover {
 }
 
 .news-list {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
     margin: 0 auto;
 
 }
@@ -389,7 +393,7 @@ hr {
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
-    font-family: 'GenSenRounded2TW-M';
+    font-family: GenSenRounded TW;
 
 }
 
@@ -438,7 +442,8 @@ hr {
     font-family: GenSenRounded TW;
     background-image: url(../links/img/index/Vector.png);
     width: 100%;
-
+  background-repeat: no-repeat;
+        background-size: cover;
 }
 
 .traffic-section-flex {
@@ -547,4 +552,234 @@ hr {
 
 #goTopBtn:hover {
     background-color: #43705b;
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    
+    .main-content {
+        display: none;
+        width: auto;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 650px;
+        background-image: url(../links/img/index/banner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .sidebar {
+        background-size: cover;
+        width: 100%;
+        padding: 0;
+        position: relative;
+        background: #fff;
+    }
+
+    .emergency-btn {
+        display: none;
+    }
+
+    .gray-deco {
+        position: absolute;
+        bottom: -181px;
+        left: -50px;
+        width: 170px;
+        z-index: 1;
+
+    }
+
+    .news-header {
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services {
+        width: 100%;
+    }
+
+    .news-list {
+        width: 100%;
+    }
+
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 18px;
+    }
+
+    .text {
+        white-space: normal
+    }
+
+    .service-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .traffic-section-flex {
+        flex-direction: column;
+        align-items: center
+    }
+
+    /* footer */
+    .footer-frist {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 漢堡選單 */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        margin: 20px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 1001;
+    }
+
+    .bar {
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* 漢堡變 X */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .sidebar-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 10px 20px;
+    }
+
+    .sidebar-nav.active {
+        display: flex;
+    }
+
+    .main-content {
+        display: none;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+
+    .care-section {
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .catdog ul {
+        padding-left: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .catdog h2 {
+        font-size: 84px;
+
+    }
+
+    .vertical-text {
+        display: block;
+        writing-mode: horizontal-tb;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%;
+        word-break: break-word;
+    }
+
+
+    .dog-photo img {
+        position: static;
+        width: 80%;
+        max-width: 300px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .cat-photo img {
+        position: static;
+        width: 80%;
+        max-width: 300px;
+        margin: 20px auto;
+        display: block;
+        padding-left: 0;
+    }
+
+    .text-block {
+        position: static;
+        width: 100%;
+        max-width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .text-block ul {
+        width: 100%;
+    }
+
+    .aaa,
+    .bbb {
+        display: none;
+    }
+
+    .map iframe {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .info-list {
+        position: static;
+        width: 100%;
+        right: auto;
+    }
+
+    .traffic-section {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
 }
